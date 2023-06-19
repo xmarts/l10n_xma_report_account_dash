@@ -44,13 +44,13 @@ class ReportAcountMove(models.Model):
     def open_view_detail_helptime(self):
         return {
             'name': f"""Detalles""",
-            'res_model': 'report.account.modline',
+            'res_model': 'account.move.line',
             'view_mode': 'tree,form',
             'target': 'current',
             # 'view_id': False,
-            'view_id': self.env.ref('l10n_xma_report_account_dash.report_account_modline_tree').id,
+            'view_id': self.env.ref('account.view_move_line_tree').id,
             'views': [
-                (self.env.ref('l10n_xma_report_account_dash.report_account_modline_tree').id, 'tree'),
+                (self.env.ref('account.view_move_line_tree').id, 'tree'),
                # (self.env.ref('treasury.treasury_lines_form').id, 'form'),
             ],
             'type': 'ir.actions.act_window',
