@@ -1,22 +1,26 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "reporte custom de facturas, ventas y compras",
-
-    'summary': """""",
-
+    'name': 'Account Reports',
+    'version': '16.0',
+    'summary': "Account Reports",
+    'sequence': 16,
     'description': """
-    """,
-
-    'author': "XMARTS",
-    'website': "",
+                    Odoo Account Reports
+                    """,
     'category': 'Accounting',
-    'version': '1.0.0',
-
-    'depends': ['base', 'account'],
-
+    'author': 'xmarts',
+    'maintainer': 'xmarts',
+    'website': '',
+    'depends': ['account', 'report_xlsx'],
     'data': [
         'security/ir.model.access.csv',
-        #'views/res_currency_rate_inherit.xml',
-        'views/res_currency_inherit.xml',
-    ],
+        'wizard/account_report_view.xml',
+        'reports/report.xml',
+        'reports/account_report_template.xml',
+
+             ],
+    'demo': [],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
 }
