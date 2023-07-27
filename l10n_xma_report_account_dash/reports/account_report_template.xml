@@ -90,20 +90,20 @@
                                             <span t-esc="balance"
                                                 t-options="{'widget': 'monetary', 'display_currency': lines.currency_id}" />
                                         </t>
-                                        <t t-else="">
+                                        <!--t t-else="">
                                             <span t-esc="balance * 0"
                                                 t-options="{'widget': 'monetary', 'display_currency': lines.currency_id}" />
-                                        </t>
+                                        </t-->
                                     </td>
                                     <td style="text-align:right;">
                                         <t t-if="balance &lt; 0.0">
                                             <span t-esc="balance * -1"
                                                 t-options="{'widget': 'monetary', 'display_currency': lines.currency_id}" />
                                         </t>
-                                        <t t-else="">
+                                        <!--t t-else="">
                                             <span t-esc="balance * 0"
                                                 t-options="{'widget': 'monetary', 'display_currency': lines.currency_id}" />
-                                        </t>
+                                        </t-->
                                     </td>
                                     <td style="text-align:right; background-color: grey;">
                                         <!-- The formala -->
